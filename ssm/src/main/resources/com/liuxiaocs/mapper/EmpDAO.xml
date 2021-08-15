@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.liuxiaocs.dao.EmpDAO">
+    <!--保存-->
+    <!--useGeneratedKeys="true"表示使用MySQL数据库的默认生成-->
+    <!--keyProperty="id"将自动生成的值赋值给id属性-->
+    <insert id="save" parameterType="Emp" useGeneratedKeys="true" keyProperty="id">
+        insert into emp values(#{id}, #{name}, #{birthday}, #{salary})
+    </insert>
+
+    <!--查询-->
+    <!--多条数据自动封装成集合-->
+    <select id="findAll" resultType="Emp">
+        select id, name, birthday, salary from emp
+    </select>
+</mapper>
