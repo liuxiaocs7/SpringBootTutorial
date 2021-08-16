@@ -47,6 +47,14 @@
             <version>2.2.0</version>
         </dependency>
 
+        <!--热部署依赖-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-devtools</artifactId>
+            <!--optional：该依赖是否可以传递。true:不能传递 只能当前项目可用-->
+            <optional>true</optional>
+        </dependency>
+
     </dependencies>
 
     <build>
