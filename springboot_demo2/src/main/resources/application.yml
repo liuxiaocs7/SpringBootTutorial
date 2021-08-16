@@ -2,6 +2,9 @@ server:
   port: 8989
   servlet:
     context-path: /springboot_demo2
+    jsp:
+      init-parameters:
+        development: true  # 开启jsp页面开发模式 作用：修改jsp页面无需重启SpringBoot应用
 
 # 声明注入值
 name: 小陈
@@ -18,3 +21,10 @@ orders:
   id: 21
   name: xiaoming
   price: 23.23
+
+# 配置jsp视图前缀和后缀  解析结果：前缀 + controller返回值 + 后缀
+spring:
+  mvc:
+    view:
+      prefix: /  # 视图前缀
+      suffix: .jsp  # 视图后缀

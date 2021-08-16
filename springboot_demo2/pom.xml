@@ -34,6 +34,27 @@
             <scope>test</scope>
         </dependency>
 
+        <!--这个依赖可以根据@ConfigurationPRoperties构建注入元数据-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-configuration-processor</artifactId>
+            <!--代表这个依赖不会被传递-->
+            <optional>true</optional>
+        </dependency>
+
+        <!--c标签库-->
+        <dependency>
+            <groupId>jstl</groupId>
+            <artifactId>jstl</artifactId>
+            <version>1.2</version>
+        </dependency>
+
+        <!--让内嵌tomcat具有解析jsp功能-->
+        <dependency>
+            <groupId>org.apache.tomcat.embed</groupId>
+            <artifactId>tomcat-embed-jasper</artifactId>
+        </dependency>
+
     </dependencies>
 
     <!--在打成jar包运行时 必须放入插件配置 注意：没有插件配置无法运行打包的项目-->
