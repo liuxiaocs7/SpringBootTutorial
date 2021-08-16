@@ -2,3 +2,13 @@ server:
   port: 8989
   servlet:
     context-path: /springboot_demo2
+
+# 声明注入值
+name: 小陈
+age: 23
+price: 23.23
+birthday: 2012/12/12 12:12:12  # 注意：默认的日期格式为 yyyy/mm/dd HH:MM:ss
+sex: true
+qqs: 6099,7088,8009  # 注入数组时候，多个元素用 “,” 逗号隔开
+lists: xiaoming, xiaochen, xiaosun, xiaohong  # 注入list时候，多个元素用 “,” 逗号隔开  和数组一致
+maps: "{'aa': '小胡', 'bb': '校长'}"  # 注入map集合可以使用 json形式进行注入  注意：使用@Value注入时必须加入 "#{${属性}}" 进行注入
