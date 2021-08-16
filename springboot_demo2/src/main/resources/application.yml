@@ -12,3 +12,9 @@ sex: true
 qqs: 6099,7088,8009  # 注入数组时候，多个元素用 “,” 逗号隔开
 lists: xiaoming, xiaochen, xiaosun, xiaohong  # 注入list时候，多个元素用 “,” 逗号隔开  和数组一致
 maps: "{'aa': '小胡', 'bb': '校长'}"  # 注入map集合可以使用 json形式进行注入  注意：使用@Value注入时必须加入 "#{${属性}}" 进行注入
+
+# 声明对象方式注入
+orders:
+  id: 21
+  name: xiaoming
+  price: 23.23
