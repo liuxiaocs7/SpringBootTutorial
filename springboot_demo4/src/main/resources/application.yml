@@ -1,0 +1,32 @@
+server:
+  port: 8989
+  servlet:
+    context-path: /springboot_demo4
+
+spring:
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/bootssm?serverTimeZone=GMT%2B8
+    username: root
+    password: lx123456
+
+mybatis:
+  mapper-locations: classpath:com/liuxiaocs/mapper/*.xml
+  type-aliases-package: com.liuxiaocs.entity
+
+# 整合mybatis
+# 配置日志
+#com:
+#  liuxiaocs:
+#    dao: debug   # 指定包级别日志
+#    com.liuxiaocs.dao: debug  # 输出指定包的日志级别
+# 包级别的日志可以监控任何包
+logging:
+  level:
+    root: info  # 调整全局日志展示为debug(默认是info的，不建议调整全局日志)
+    com.liuxiaocs.dao: debug  # 输出指定包的日志级别
+    com.liuxiaocs.service: debug  # 输出指定包的路径
+  file:
+    name: run.log  # 指定生成日志文件名称
+    path: ./  # 将日志文件生成当前目录(当前项目的目录中)
