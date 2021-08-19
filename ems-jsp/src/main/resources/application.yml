@@ -5,9 +5,9 @@ server:
     jsp:
       init-parameters:
         development: true  # 开启jsp模板开发模式，更新jsp之后不需要重启
-# 配置jsp模板
+
 spring:
-  mvc:
+  mvc:  # 配置jsp模板
     view:
       prefix: /
       suffix: .jsp
